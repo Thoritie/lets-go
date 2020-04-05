@@ -144,12 +144,36 @@ func main() {
 }
 
 ```
+---- 
 
 ### Constant
 ค่าคงที่ ต้องประกาศ Capitalize เหมือน Export
+
 ```go
 func main() {
    	const Pi = 3.14
     fmt.Println(Pi)
 }
 ```
+
+---
+
+### For loop
+
+Example: [Loop](https://github.com/Thoritie/lets-go/blob/master/introduction/introduction_test.go#L87)
+
+### Switch
+
+Example: [Switch Case](https://github.com/Thoritie/lets-go/blob/master/introduction/introduction_test.go#L95)
+
+### If Case
+
+Example: [If Case](https://github.com/Thoritie/lets-go/blob/master/introduction/introduction_test.go#L100)
+
+--- 
+
+### Defer
+Defer จะเป็นเหมือน statement ที่ประกาศเอาไว้ตอนไหนก็ได้ แต่จะถูกทำตอนสุดท้ายเสมอ
+เราทำแบบนี้เพื่อทำให้ context ของการทำงานยังอยู่ด้วยกัน
+
+ TBD...
