@@ -4,7 +4,7 @@
 ref: https://www.dropbox.com/sh/is3hwdqa1dpsb99/AACb9QvxPEUo1Z-tD0Nz2KNZa?dl=0
 
 ### History 
-1. 2007 Google เจอว่าต้อง Complie Code หลักล้าน บรรทัด กว่าจะ Test ได้รอกันยาวว
+1. 2007 Google เจอว่าต้อง Compile Code หลักล้าน บรรทัด กว่าจะ Test ได้รอกันยาวว
 2. Robert Griesemer, Rob Pike และ Thompson 🧑🏻‍💻ก่อให้เกิด "GO" ขึ้นมา ซึ่งความดีงามของ GO มีดังนี้
     - Fast compilation
     - Less cumbersome code
@@ -72,6 +72,61 @@ func main() {
 ส่วน Main ก็คือส่วน เรียก function add ที่เราเขียนไว้มาใช้งาน
 
 
-...
+💡**Function ถ้ามี return type เดียวกัน ยุบเป็นแบบนี้ได้เลย**
 
-MORE TBD..
+```go
+func add(x, y int) int {
+    return x+ y
+}
+```
+
+---
+
+### Multiple result
+
+👫เจ้า GO สามารถ return ค่าออกจาก function ได้มากกว่า 1 ค่า
+
+```go
+func swap(x, y int) (int, int) {
+	return y, x
+}
+```
+
+--- 
+
+### Named return
+ถ้าเรา กำหนด function signature ไว้แล้วตรง บรรทัดแรก ตอน return ต่อให้ไม่บอกว่า Return อะไร Go จะรู้ว่า เราต้องการจะ return อะไร
+
+```go
+func declare() (xx int, yy int) {
+	xx = 100
+	yy = 200
+	return
+}
+```
+
+
+---
+
+### Variable
+variable ใน Go สามารถประกาศได้ 2 แบบ
+- Variable `var something = "Thoritie"`
+- Short Variable `somthing := "Shorter one"`
+
+---
+
+### Basic Type
+
+* bool - Boolean
+* string - String
+* int etc.
+* byte - มีค่าเท่ากับ uint8
+* rune - เก็บข้อมูลในรูปแบบ unicode
+* float32, float64
+* complex64, complex128
+
+---
+### Zero Value
+* 0 for numaric type
+* false for boolean
+* "" empthy string for strings.
