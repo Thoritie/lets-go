@@ -124,9 +124,32 @@ variable ใน Go สามารถประกาศได้ 2 แบบ
 * rune - เก็บข้อมูลในรูปแบบ unicode
 * float32, float64
 * complex64, complex128
-
+ 
 ---
 ### Zero Value
 * 0 for numaric type
 * false for boolean
-* "" empthy string for strings.
+* "" empthy string for strings
+
+--- 
+
+### Type Inference
+
+เราไม่จำเป็นต้องประกาศประเภทของ Variable ก็ได้ ในจังหวะที่ Compile Go จะบอก Type ให้เอง
+
+```go
+func main() {
+    v := 42
+    fmt.Printf("v is type of %T\n", v)
+}
+
+```
+
+### Constant
+ค่าคงที่ ต้องประกาศ Capitalize เหมือน Export
+```go
+func main() {
+   	const Pi = 3.14
+    fmt.Println(Pi)
+}
+```
