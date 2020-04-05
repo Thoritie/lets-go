@@ -114,7 +114,7 @@ func Test_pointer(t *testing.T) {
 	fmt.Printf("in main test function : %p\n", &i)
 	mutate(&i)
 
-	fmt.Pri^(TestAverage_1_2_3_5)ntln("i", i)
+	fmt.Println("i", i)
 }
 
 // Struct
@@ -149,6 +149,7 @@ func Test_Map(t *testing.T) {
 	fmt.Println(getPriceTag("apple"))
 }
 
+// TODO Revise this line
 /////////////
 // function value
 
